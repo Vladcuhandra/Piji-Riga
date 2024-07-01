@@ -1,0 +1,366 @@
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+}
+
+.header {
+    background-color: #00000067;
+    color: #ffffff;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 20px;
+    font-family: Geneva, Verdana, sans-serif;
+}
+
+/* Centering the logo */
+.logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: Copperplate, Papyrus, fantasy;
+    text-shadow: 0px 0px 10px #ff00f2;
+}
+
+
+.logo:hover{
+    color: #f4b400;
+}
+
+
+.services-section{
+    background-color:#3b646e;
+}
+
+
+/* Flex container for the left-side links */
+.nav-left {
+    display: flex;
+    gap: 20px; /* Space between the links */
+}
+
+/* Flex container for the right-side links */
+.nav-right {
+    display: flex;
+    gap: 20px; /* Space between the links */
+}
+
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+
+/* Styling the nav links */
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    padding: 5px 10px;
+}
+
+.nav-links a:hover {
+    color: #f4b400;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('photo1.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    z-index: 1; /* Ensure the hero-section content is above the overlay */
+}
+
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Adjust the opacity value to make it darker or lighter */
+    z-index: -1; /* Ensure the overlay is behind the hero-section content */
+}
+
+.hero-section h1, .hero-section p, .hero-section .btn {
+    position: relative;
+    z-index: 2; /* Ensure the text and button are above the overlay */
+}
+
+.hero-section h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-shadow: 0px 0px 10px #ff00f2; /* Corrected text-shadow */
+    font-family: Copperplate, Papyrus, fantasy;
+}
+
+.hero-section p {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-family: 'Brush Script MT', cursive;
+    text-shadow: 0px 0px 10px #ff00f2; /* Corrected text-shadow */
+}
+
+.btn {
+    background: #006207;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-shadow: 0px 0px 20px #00d0ff;
+}
+
+.btn:hover {
+    background: #007e08;
+}
+
+/* About Section */
+.about-section {
+    padding: 4rem 20px;
+    text-align: center;
+    background: #3b646e;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.about-section p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Services Section */
+.services-section {
+    padding: 4rem 20px;
+    text-align: center;
+}
+
+.services-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.service {
+    margin: 2rem 0;
+}
+
+.service h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.service p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 4rem 20px;
+    text-align: center;
+    background-image: url("photo1.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: #f4b400;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-section button {
+    background: #f4b400;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+    background: #d49000;
+}
+
+/* Footer */
+.footer {
+    background: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        background: #ffffff;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+    
+}
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 50vh;
+    position: relative;
+    overflow: hidden;
+}
+.slider-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("photo10.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    transition: filter 0.3s;
+    z-index: -1;
+}
+
+.slider-container:hover::before {
+    filter: blur(20px);
+}
+
+.slider {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: rotate 30s linear infinite;
+}
+
+@keyframes rotate{
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+
+.slider span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(350px);
+}
+
+.slider span img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    transition: 2s;
+}
+
+
+.slider span:hover img {
+    transform: translateY(-50px) scale(1.2);
+}
