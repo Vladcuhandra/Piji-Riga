@@ -23,8 +23,12 @@
     </header>
 
     <section id="home" class="hero-section">
-        <h1>Welcome to Pjji Riga</h1>
-        <p>Your gateway to excellence</p>
+        <h1 id="hero-heading">Welcome to Piji Riga</h1>
+        <p id="hero-subheading">Your gateway to excellence</p>
+        <div class="buttons">
+            <button onclick="changeBackground('photo1.jpg', 'Piji Riga', 'Your gateway to excellence')">Riga</button>
+            <button onclick="changeBackground('photo4.jpg', 'Piji Jurmala', 'Experience the best in Jurmala')">Jūrmala</button>
+        </div>
         <a href="#about" class="btn">Learn More</a>
     </section>
 
@@ -45,6 +49,21 @@
         </div>
     </section>
 
+
+<section class="image-body">
+    <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+      <img class="image" src="slide1.jpg" draggable="false" />
+      <img class="image" src="slide2.jpg" draggable="false" />
+      <img class="image" src="slide3.jpg" draggable="false" />
+      <img class="image" src="slide4.jpg" draggable="false" />
+      <img class="image" src="slide5.jpg" draggable="false" />
+      <img class="image" src="slide6.jpg" draggable="false" />
+      <img class="image" src="slide7.jpg" draggable="false" />
+      <img class="image" src="slide8.jpg" draggable="false" />
+    </div>
+  </section>
+
+
     <section id="services" class="services-section">
         <div class="service">
             <h3>Our Restaurant</h3>
@@ -55,6 +74,44 @@
             <p>As the sun sets, Piji Riga transforms into one of the city's hottest nightlife spots. Our nightclub boasts state-of-the-art sound and lighting systems, a spacious dance floor, and a lineup of renowned DJs and live performers. Whether you're looking to dance the night away, enjoy a VIP experience, or simply unwind with friends, our club offers an exhilarating atmosphere that keeps the energy high and the party going.</p>
         </div>
     </section>
+<div class="form-container">
+    <div class="dark-overlay"></div>
+     <form class="form">
+    
+        <div class="flex">
+            <label>
+                <input required="" placeholder="" type="text" class="input">
+                <span>first name</span>
+            </label>
+    
+            <label>
+                <input required="" placeholder="" type="text" class="input">
+                <span>last name</span>
+            </label>
+        </div>  
+                
+        <label>
+            <input required="" placeholder="" type="email" class="input">
+            <span>email</span>
+        </label> 
+            
+        <label>
+            <input required="" type="tel" placeholder="" class="input">
+            <span>contact number</span>
+        </label>
+        <label>
+            <textarea required="" rows="3" placeholder="" class="input01"></textarea>
+            <span>message</span>
+        </label>
+        
+        <button class="fancy" href="#">
+          <span class="top-key"></span>
+          <span class="text">submit</span>
+          <span class="bottom-key-1"></span>
+          <span class="bottom-key-2"></span>
+        </button>
+    </form>
+
 
     <section id="contact" class="contact-section">
         <h2>Contact Us</h2>
@@ -65,7 +122,7 @@
             <button type="submit" class="btn">Send Message</button>
         </form>
     </section>
-
+</div>
     <footer class="footer">
         <p>&copy; 2024 Pjji Riga. All Rights Reserved.</p>
     </footer>
