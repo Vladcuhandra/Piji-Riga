@@ -399,7 +399,7 @@ button {
 
 /*----------------------image track-------------------------*/
 .image-body {
-    height: 0vh;
+    height: 70vh;
     width: 100vw;
     position: relative;
     overflow: hidden; /* Ensure images don't overflow */
