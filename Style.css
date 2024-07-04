@@ -95,35 +95,6 @@ body {
     transition: all 0.3s ease;
 }
 
-/* Hero Section */
-.hero-section {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: url('photo1.jpg') no-repeat center center/cover;
-    background-attachment: fixed;
-    color: #fff;
-    text-align: center;
-    z-index: 1; /* Ensure the hero-section content is above the overlay */
-    transition: background-image 0.5s ease-in-out;
-}
-
-#hero-heading, #hero-subheading {
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  .fade-out {
-    opacity: 0;
-  }
-  
-  .fade-in {
-    opacity: 1;
-  }
-
-
 
 /* General button styles */
 button {
@@ -224,6 +195,33 @@ button {
     margin-left: auto; /* Align the second button to the right */
   }
   
+/* Hero Section */
+.hero-section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url('photo1.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    color: #fff;
+    text-align: center;
+    z-index: 1; /* Ensure the hero-section content is above the overlay */
+    transition: background-image 0.5s ease-in-out;
+}
+
+#hero-heading, #hero-subheading {
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .fade-out {
+    opacity: 0;
+  }
+  
+  .fade-in {
+    opacity: 1;
+  }
 
 .hero-section::before {
     content: "";
@@ -273,18 +271,73 @@ button {
 .about-section {
     padding: 4rem 20px;
     text-align: center;
-    background: #3b646e;
+    background: url('photo1.jpg') no-repeat center center/cover;
+    background-attachment: fixed;
+    height: 100vh;
+    position: relative; /* Ensure relative positioning for pseudo-element */
+}
+
+.video-container {
+    position: relative;
+    z-index: 2; /* Ensure video is above the blur effect */
+}
+.blur-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(40px); /* Apply blur effect to the background */
+    z-index: 1; /* Ensure blur is behind video and text */
+    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)); /* Smooth top border */
+    -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)); /* For Safari */
+}
+.blur-background-2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(40px); /* Apply blur effect to the background */
+    z-index: -1; /* Ensure blur is behind video and text */
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)); /* Smooth top border */
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)); /* For Safari */
+}
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    z-index: 1; /* Ensure it's above the background image */
 }
 
 .about-section h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    font-family: Copperplate, Papyrus, fantasy;
+    position: relative; /* Ensure content appears above overlay */
+    z-index: 2; /* Ensure content appears above overlay */
+    color: #fff; /* Text color for better visibility */
 }
 
 .about-section p {
     font-size: 1rem;
     max-width: 600px;
     margin: 0 auto;
+    font-family: Copperplate, Papyrus, fantasy;
+    position: relative; /* Ensure content appears above overlay */
+    z-index: 2; /* Ensure content appears above overlay */
+    color: #fff; /* Text color for better visibility */
+}
+
+.video-container {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    padding-top: 50px;
 }
 
 /* Services Section */
