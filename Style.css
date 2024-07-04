@@ -273,7 +273,7 @@ button {
     text-align: center;
     background: url('photo1.jpg') no-repeat center center/cover;
     background-attachment: fixed;
-    height: 100vh;
+    height: 70vh;
     position: relative; /* Ensure relative positioning for pseudo-element */
 }
 
