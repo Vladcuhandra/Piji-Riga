@@ -37,7 +37,7 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     font-family: Copperplate, Papyrus, fantasy;
-    text-shadow: 0px 0px 10px #ff00f2;
+    text-shadow: 0px 0px 10px #ffea00;
 }
 
 
@@ -242,7 +242,7 @@ button {
 .hero-section h1 {
     font-size: 4rem;
     margin-bottom: 1rem;
-    text-shadow: 0px 0px 10px #ff00f2; /* Corrected text-shadow */
+    text-shadow: 0px 0px 10px #ffea00; /* Corrected text-shadow */
     font-family: Copperplate, Papyrus, fantasy;
 }
 
@@ -250,7 +250,7 @@ button {
     font-size: 2.5rem;
     margin-bottom: 2rem;
     font-family: 'Brush Script MT', cursive;
-    text-shadow: 0px 0px 10px #ff00f2; /* Corrected text-shadow */
+    text-shadow: 0px 0px 10px #ffea00; /* Corrected text-shadow */
 }
 
 .btn {
@@ -269,29 +269,54 @@ button {
 
 /* About Section */
 .about-section {
-    padding: 4rem 20px;
-    text-align: center;
-    background: url('photo1.jpg') no-repeat center center/cover;
-    background-attachment: fixed;
-    height: 70vh;
-    position: relative; /* Ensure relative positioning for pseudo-element */
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  background: url('photo1.jpg') no-repeat center center/cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  z-index: 2; /* Ensure content is above the blur */
+}
+
+.about-text {
+  flex: 1;
+  margin-right: 20px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center the text */
+  align-items: center;
 }
 
 .video-container {
-    position: relative;
-    z-index: 2; /* Ensure video is above the blur effect */
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
+
 .blur-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    backdrop-filter: blur(40px); /* Apply blur effect to the background */
-    z-index: 1; /* Ensure blur is behind video and text */
-    mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)); /* Smooth top border */
-    -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)); /* For Safari */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(40px);
+  z-index: 1; /* Ensure blur is behind video and text */
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1)); /* For Safari */
 }
+
 .blur-background-2 {
     position: absolute;
     top: 0;
@@ -342,28 +367,40 @@ button {
 
 /* Services Section */
 .services-section {
-    padding: 4rem 20px;
-    text-align: center;
+  padding: 4rem 20px;
+  text-align: center;
+  font-family: Copperplate, Papyrus, fantasy;
+  color: #ccc;
+  background-color: #000000;
 }
 
 .services-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.services-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .service {
-    margin: 2rem 0;
+  flex: 1 1 45%; /* Allow some flexibility in width */
+  margin: 2rem 1rem;
+  
 }
 
 .service h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .service p {
-    font-size: 1rem;
-    max-width: 600px;
-    margin: 0 auto;
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
 /* Contact Section */
