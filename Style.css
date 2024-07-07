@@ -349,10 +349,10 @@ button {
 }
 
 .about-section p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     max-width: 600px;
     margin: 0 auto;
-    font-family: Copperplate, Papyrus, fantasy;
+    font-family: Garamond, serif;
     position: relative; /* Ensure content appears above overlay */
     z-index: 2; /* Ensure content appears above overlay */
     color: #fff; /* Text color for better visibility */
@@ -393,12 +393,12 @@ button {
 }
 
 .service h3 {
-  font-size: 1.5rem;
+  font-size: 3rem;
   margin-bottom: 0.5rem;
 }
 
 .service p {
-  font-size: 1rem;
+  font-size: 2rem;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -496,6 +496,7 @@ button {
     background: url('photo1.jpg') no-repeat center center/cover;
     background-attachment: fixed;
   }
+  
   #image-track {
     display: flex;
     gap: 4vmin;
@@ -811,3 +812,14 @@ button {
     right: 0;
     width: 0;
   }
+  
+  .gallery-title {
+    position: relative;
+    text-align: center;
+    font-size: 2.5rem; /* Adjust size as needed */
+    color: white;
+    margin-bottom: 2rem;
+    z-index: 2; /* Ensure text is above the dark overlay */
+    font-family: Copperplate, Papyrus, fantasy; /* Optional: match other section fonts */
+    text-shadow: 0px 0px 10px #ffea00;
+}
