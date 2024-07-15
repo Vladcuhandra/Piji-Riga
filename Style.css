@@ -356,6 +356,8 @@ button {
     position: relative; /* Ensure content appears above overlay */
     z-index: 2; /* Ensure content appears above overlay */
     color: #fff; /* Text color for better visibility */
+    background-color: #0090a335;
+    border-radius: 15px;
 }
 
 .video-container {
@@ -366,6 +368,8 @@ button {
 }
 
 /* Services Section */
+
+
 .services-section {
   padding: 4rem 20px;
   text-align: center;
@@ -392,62 +396,91 @@ button {
   
 }
 
-.service h3 {
+.service h3 { 
   font-size: 3rem;
   margin-bottom: 0.5rem;
+  text-shadow: 0px 0px 10px #ffea00;
 }
 
 .service p {
   font-size: 2rem;
   max-width: 600px;
   margin: 0 auto;
+  background-color: #0090a335;
+  border-radius: 15px;
 }
 
 /* Contact Section */
 .contact-section {
-    padding: 4rem 20px;
-    text-align: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    color: #f4b400;
+  position: relative; /* Ensure relative positioning for content */
+  background-image: url("photo1.jpg"); /* Replace with your image path */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  padding: 4rem 20px;
+  text-align: center;
+  color: #f4b400;
+  z-index: 2; /* Ensure the contact section is above the overlay */
+}
+.contact-background-photo {
+  position: absolute;
+  top: 0;
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust to center horizontally */
+  width: 80%; /* Adjust width as needed */
+  height: 110%; /* Maintain full height */
+  background-image: url("slide4.jpg"); /* Replace with your background photo */
+  background-size: cover;
+  background-position: center;
+  opacity: 75%;
+  z-index: -1; /* Behind everything */
+}
+.contact-content {
+  position: relative;
+  z-index: 0; /* Ensure it's above the overlay */
 }
 
 .contact-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+  position: relative;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  z-index: 2;
 }
 
 .contact-section form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
 }
 
 .contact-section input,
 .contact-section textarea {
-    width: 100%;
-    max-width: 400px;
-    padding: 0.75rem;
-    margin: 0.5rem 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 2;
 }
 
 .contact-section button {
-    background: #f4b400;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    border: none;
-    cursor: pointer;
+  background: #f4b400;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  
 }
 
 .contact-section button:hover {
-    background: #d49000;
+  background: #d49000;
 }
+
 
 /* Footer */
 .footer {
@@ -596,6 +629,19 @@ button {
 
 /* -------------------------------Form---------------------------------- */
 
+#form-section {
+  position: relative; /* Ensure relative positioning for children */
+  display: flex; /* Use flexbox to align items */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 60vh; /* Adjust height as needed */
+  background-image: url("photo1.jpg"); /* Replace with your image path */
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  padding: 0px; 
+}
+
 .form-container {
     display: flex;
     justify-content: center;
@@ -606,7 +652,19 @@ button {
     background-size: cover;
     background-position: center;
     position: relative;
+    flex: 1;
 }
+
+.reserve-title {
+  position: relative;
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    z-index: 2;
+    font-family: Copperplate, Papyrus, fantasy;
+    text-shadow: 0px 0px 10px #ffea00;
+}
+
 .dark-overlay {
     position: absolute;
     top: 0;
@@ -614,13 +672,13 @@ button {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
-}
+  }
 .form {
     display: flex;
     flex-direction: column;
     gap: 10px;
     max-width: 350px;
-    background-color: #939393;
+    background-color: #44ffae2d;
     padding: 20px;
     border-radius: 10px;
     position: relative;
@@ -645,7 +703,7 @@ button {
     width: 100%;
     padding: 10px 10px 20px 10px;
     outline: 0;
-    border: 1px solid rgba(181, 14, 14, 0.397);
+    border: 1px solid rgba(255, 0, 0, 0.397);
     border-radius: 5px;
   }
   
@@ -653,7 +711,7 @@ button {
     position: absolute;
     left: 10px;
     top: 15px;
-    color: grey;
+    color: rgb(4, 4, 4);
     font-size: 0.9em;
     cursor: text;
     transition: 0.3s ease;
@@ -686,7 +744,7 @@ button {
     position: absolute;
     left: 10px;
     top: 50px;
-    color: grey;
+    color: rgb(0, 0, 0);
     font-size: 0.9em;
     cursor: text;
     transition: 0.3s ease;
@@ -709,10 +767,10 @@ button {
   
   .fancy {
     background-color: transparent;
-    border: 2px solid #cacaca;
+    border: 2px solid #00991c;
     border-radius: 0px;
     box-sizing: border-box;
-    color: #fff;
+    color: #ffffff;
     cursor: pointer;
     display: inline-block;
     font-weight: 390;
@@ -753,7 +811,7 @@ button {
     transition: all 0.3s ease-in-out;
     text-transform: lowercase;
     text-decoration: none;
-    color: #818181;
+    color: #00ff48;
     transform: translateX(30%);
   }
   
@@ -763,7 +821,7 @@ button {
     top: -2px;
     left: 0.625rem;
     position: absolute;
-    background: white;
+    background: rgb(242, 255, 0);
     transition: width 0.5s ease-out, left 0.3s ease-out;
   }
   
@@ -773,7 +831,7 @@ button {
     right: 1.875rem;
     bottom: -2px;
     position: absolute;
-    background: #ffe600;
+    background: #0090a3;
     transition: width 0.5s ease-out, right 0.3s ease-out;
   }
   
@@ -783,18 +841,18 @@ button {
     right: 0.625rem;
     bottom: -2px;
     position: absolute;
-    background: rgb(255, 255, 0);
+    background: rgb(255, 255, 88);
     transition: width 0.5s ease-out, right 0.3s ease-out;
   }
   
   .fancy:hover {
     color: white;
-    background: #cacaca;
+    background: #90ff71;
   }
   
   .fancy:hover::before {
     width: 1.5rem;
-    background: rgb(255, 0, 0);
+    background: rgb(17, 0, 255);
   }
   
   .fancy:hover .text {
@@ -812,6 +870,32 @@ button {
     right: 0;
     width: 0;
   }
+
+  .reservation-info {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    right: 700px; /* Adjust right offset as needed */
+    transform: translateY(-50%);
+    text-align: center;
+    z-index: 2; /* Ensure above background */
+}
+
+.reservation-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.reservation-info p {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+
   
   .gallery-title {
     position: relative;
